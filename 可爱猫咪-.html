@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动播放视频（带声音）</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .tip {
+            color: #666;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>视频自动播放（点击后开启声音）</h2>
+        <!-- 视频标签：自动静音播放，点击后开启声音 -->
+        <video id="myVideo" controls autoplay muted onclick="this.muted = false">
+            <source src="可爱猫咪.mp4" type="video/mp4">
+            视频无法播放
+        </video>
+        <div class="tip">
+            <p>💡 点击视频即可开启声音（浏览器规则：首次打开需手动开启声音）</p>
+        </div>
+    </div>
+</body>
+</html>
